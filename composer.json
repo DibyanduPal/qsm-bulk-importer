@@ -1,0 +1,19 @@
+{
+  "name": "dibyandu/qsm-bulk-importer",
+  "description": "QSM Bulk Importer — bulk-import questions into Quiz & Survey Master (QSM) from CSV/XLSX/JSON.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=7.4",
+    "phpoffice/phpspreadsheet": "^1.28"
+  },
+  "autoload": {
+    "psr-4": {
+      "QSI\\": "includes/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}

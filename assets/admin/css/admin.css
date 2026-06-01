@@ -1,0 +1,127 @@
+/**
+ * QSM Bulk Importer — Admin CSS
+ * Ready-to-publish, scoped styles for the admin import pages.
+ *
+ * Keep selectors specific to avoid colliding with other admin styles.
+ *
+ * Note: WordPress admin already provides base styles for tables, buttons and forms.
+ * These rules only add plugin-specific layout, spacing and the drag/drop UI.
+ */
+
+.qsm-bulk-wrap {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    color: #111827;
+}
+
+/* Card */
+.qsm-card {
+    background: #ffffff;
+    border: 1px solid #e6e9ee;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 0 rgba(12, 21, 26, 0.03);
+}
+
+/* Dropzone */
+.qsm-dropzone {
+    border-radius: 8px;
+    border: 2px dashed #d1d5db;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+    padding: 28px;
+    transition: background-color .12s ease, border-color .12s ease, box-shadow .12s ease;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}
+
+.qsm-dropzone:hover {
+    border-color: #b6c2d1;
+    box-shadow: 0 4px 10px rgba(17, 24, 39, 0.03);
+}
+
+.qsm-dropzone.is-dragover {
+    background-color: #f8fafc;
+    border-color: #60a5fa;
+    box-shadow: 0 6px 18px rgba(32, 120, 244, 0.08);
+}
+
+/* File info */
+#qsm-selected-file {
+    margin-top: 10px;
+    color: #374151;
+    font-size: 13px;
+}
+
+/* Form controls */
+.qsm-card .form-table th {
+    width: 220px;
+    vertical-align: top;
+    padding-top: 12px;
+}
+
+.qsm-card .form-table td {
+    padding-top: 8px;
+}
+
+/* Make select inputs a little taller and neater */
+.qsm-card select,
+.qsm-card input[type="text"],
+.qsm-card input[type="file"] {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 8px 10px;
+    line-height: 1.35;
+    min-height: 36px;
+    box-sizing: border-box;
+}
+
+/* Buttons (do not override WP core classes; add small helper) */
+.qsm-btn-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Spinner */
+.qsm-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0,0,0,0.12);
+    border-top-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    animation: qsm-spin 0.9s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+@keyframes qsm-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Recent imports errors / pre blocks */
+.qsm-errors-pre {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+    max-height: 360px;
+    overflow: auto;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 782px) {
+    .qsm-card .form-table th { width: 150px; }
+    .qsm-card { padding: 14px; }
+}
+
+/* Accessibility focus states */
+.qsm-dropzone:focus,
+.qsm-card select:focus,
+.qsm-card input[type="text"]:focus {
+    outline: 3px solid rgba(99,102,241,0.12);
+    outline-offset: 2px;
+}

@@ -1,0 +1,4 @@
+/* assets/admin/css/qsm-dropzone-fix.css */
+.qsm-dropzone { cursor: pointer; transition: background .15s ease, border-color .15s ease; }
+.qsm-dropzone.qsm-dragover { border-color: #0073aa !important; background: #f3fbff !important; box-shadow: 0 0 0 4px rgba(0,115,170,0.06); }
+#qsm_file_name { margin-top: 10px; font-size: 13px; color: #444; }
